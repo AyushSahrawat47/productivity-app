@@ -2,17 +2,19 @@
   "name": "productivity",
   "version": "0.1.0",
   "private": true,
- "main": "electron/electron.js",
+  "main": "electron/electron.js",
   "scripts": {
-   "dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && node_modules\\.bin\\electron .\"",
+    "dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && node_modules\\.bin\\electron .\"",
     "build": "next build --turbopack && next export",
-    "start": "electron .", 
+    "start": "electron .",
     "lint": "eslint"
   },
   "dependencies": {
+    "mongoose": "^8.18.1",
     "next": "15.5.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "zod": "^4.1.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
