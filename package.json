@@ -4,6 +4,7 @@
   "private": true,
   "main": "electron/electron.js",
   "scripts": {
+    "next":"next dev",
     "dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && node_modules\\.bin\\electron .\"",
     "build": "next build --turbopack && next export",
     "start": "electron .",
