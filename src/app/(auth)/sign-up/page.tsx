@@ -16,14 +16,13 @@ import { Loader2 } from 'lucide-react';
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
-const page = () => {
+const Page = () => {
   const [username, setUsername] = useState(" ");
   const [usernameMessage, setUsernameMessage] = useState(" ");
   const [isCheckingUsername, setIsCheckingUsername] = useState(false);
@@ -76,7 +75,7 @@ const page = () => {
     } catch (err) {
       console.log("Error in signup of user", err);
       const axiosError = err as AxiosError<ApiResponse>;
-      let errorMessage = axiosError.response?.data.message;
+      const errorMessage = axiosError.response?.data.message;
       toast("Signup failed", { description: errorMessage });
     }
   };
@@ -163,4 +162,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
